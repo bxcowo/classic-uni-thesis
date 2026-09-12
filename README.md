@@ -1,4 +1,4 @@
-# uni-bachelor-thesis
+# classic-uni-thesis
 
 Plantilla de Typst para **tesis de pregrado de la Universidad Nacional de
 Ingeniería (UNI)**, en español: encabezados serif negros, portada enmarcada por
@@ -38,19 +38,19 @@ que reemplaces el texto de ejemplo y empieces a escribir de inmediato.
 Una vez publicado el paquete, crea un proyecto con:
 
 ```sh
-typst init @preview/uni-bachelor-thesis
-cd uni-bachelor-thesis
+typst init @preview/classic-uni-thesis
+cd classic-uni-thesis
 typst watch main.typ
 ```
 
 ### Desde este repositorio (desarrollo local)
 
 Los archivos de `template/` importan la librería como
-`@preview/uni-bachelor-thesis:0.1.0`, así que para probarlos en local enlaza el
+`@preview/classic-uni-thesis:0.1.0`, así que para probarlos en local enlaza el
 repositorio en tu carpeta de paquetes:
 
 ```sh
-DEST="${XDG_DATA_HOME:-$HOME/.local/share}/typst/packages/preview/uni-bachelor-thesis/0.1.0"
+DEST="${XDG_DATA_HOME:-$HOME/.local/share}/typst/packages/preview/classic-uni-thesis/0.1.0"
 mkdir -p "$(dirname "$DEST")"
 ln -s "$(pwd)" "$DEST"
 
@@ -133,6 +133,12 @@ El logo (`logo/universidad_nacional_de_ingenieria_logo_vector.png`) y el nombre
 **Universidad Nacional de Ingeniería** están definidos directamente en la
 plantilla; no se pasan como parámetros.
 
+> **Aviso de copyright.** El archivo
+> `logo/universidad_nacional_de_ingenieria_logo_vector.png` es una obra y marca
+> de la Universidad Nacional de Ingeniería y **no está cubierto** por la licencia
+> del paquete. Se distribuye con autorización de su titular; consulta los
+> términos de identidad de la UNI en <https://www.uni.edu.pe>.
+
 ## Figuras e Índice de Figuras
 
 Las figuras usan `#figure(image(...))`. Para mantener ordenado el Índice de
@@ -141,7 +147,7 @@ Figuras, dales un `flex-caption`: la forma **larga** va bajo la figura y la
 capítulos son `#include`dos y no heredan los imports de `main.typ`):
 
 ```typ
-#import "@preview/uni-bachelor-thesis:0.1.0": flex-caption
+#import "@preview/classic-uni-thesis:0.1.0": flex-caption
 
 #figure(
   image("../figures/your-figure.png", width: 80%),
@@ -195,7 +201,7 @@ typst watch   main.typ     # vista previa mientras editas
 
 ## Desarrollo de la plantilla
 
-El template usa el import absoluto `@preview/uni-bachelor-thesis:0.1.0`. Para
+El template usa el import absoluto `@preview/classic-uni-thesis:0.1.0`. Para
 trabajar sobre este repositorio, enlázalo como paquete local (ver
 "Inicio rápido") y compila con:
 
@@ -205,7 +211,16 @@ typst compile template/main.typ
 
 ## Licencia
 
-MIT. Plantilla original © 2026 Alejandro Cobos
+El paquete usa dos licencias (SPDX `MIT AND MIT-0`):
+
+- **MIT** para el código de la librería (`lib.typ` y los archivos fuera de
+  `template/`).
+- **MIT-0** para el contenido de `template/`, de modo que puedas reutilizar y
+  distribuir el proyecto resultante sin obligación de atribución.
+
+Plantilla original © 2026 Alejandro Cobos
 ([@Cobos-Bioinfo](https://github.com/Cobos-Bioinfo)); adaptación para la UNI ©
-2026 Aarón Flores Alberca ([@bxcowo](https://github.com/bxcowo)). El código es
-MIT; el texto de ejemplo y `placeholder.svg` son tuyos para reemplazar.
+2026 Aarón Flores Alberca ([@bxcowo](https://github.com/bxcowo)).
+
+El logo institucional no está cubierto por estas licencias (ver "Logo y
+universidad").

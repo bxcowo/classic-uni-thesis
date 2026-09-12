@@ -5,12 +5,12 @@
 //  Vista previa:   typst watch main.typ
 //
 //  Este archivo conecta el material preliminar + capítulos + material final a
-//  través de la plantilla `uni-bachelor-thesis`. Reemplaza el contenido de
+//  través de la plantilla `classic-uni-thesis`. Reemplaza el contenido de
 //  ejemplo por el tuyo; el orden de las secciones lo fija la plantilla, así que
 //  solo editas contenido aquí (y en los archivos de chapters/).
 // ============================================================================
 
-#import "@preview/uni-bachelor-thesis:0.1.0": abbrev-table, flex-caption, thesis
+#import "@preview/classic-uni-thesis:0.1.0": abbrev-table, flex-caption, thesis
 
 #show: thesis.with(
   // ---- metadatos ----

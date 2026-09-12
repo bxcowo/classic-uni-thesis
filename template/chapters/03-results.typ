@@ -1,4 +1,4 @@
-#import "@preview/uni-bachelor-thesis:0.1.0": flex-caption
+#import "@preview/classic-uni-thesis:0.1.0": flex-caption
 
 = Resultados
 

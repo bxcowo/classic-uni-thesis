@@ -1,11 +1,11 @@
 [package]
-name = "uni-bachelor-thesis"
+name = "classic-uni-thesis"
 version = "0.1.0"
 entrypoint = "lib.typ"
 authors = ["Aarón Flores Alberca <@bxcowo>", "Alejandro Cobos <@Cobos-Bioinfo>"]
-license = "MIT"
+license = "MIT AND MIT-0"
 description = "Tesis de pregrado de la Universidad Nacional de Ingeniería."
-repository = "https://github.com/bxcowo/uni-bachelor-thesis"
+repository = "https://github.com/bxcowo/classic-uni-thesis"
 keywords = ["thesis", "tesis", "pregrado", "universidad nacional de ingeniería", "uni"]
 categories = ["thesis", "report"]
 compiler = "0.12.0"
