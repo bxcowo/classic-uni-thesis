@@ -209,6 +209,15 @@ trabajar sobre este repositorio, enlázalo como paquete local (ver
 typst compile template/main.typ
 ```
 
+## Agradecimientos
+
+- A la **Universidad Nacional de Ingeniería (UNI)**, por la institución y por
+  autorizar el uso de su logo en esta plantilla.
+- A **Alejandro Cobos** ([@Cobos-Bioinfo](https://github.com/Cobos-Bioinfo)),
+  autor de
+  [`classic-msc-thesis`](https://github.com/Cobos-Bioinfo/classic-msc-thesis),
+  del que parte este proyecto.
+
 ## Licencia
 
 El paquete usa dos licencias (SPDX `MIT AND MIT-0`):
