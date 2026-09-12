@@ -1,0 +1,10 @@
+# Compiled output
+*.pdf
+
+# Logos institucionales con derechos (no redistribuir)
+/logo/
+
+# Editor / OS cruft
+.DS_Store
+Thumbs.db
+*.swp
