@@ -103,7 +103,6 @@
   tipografia: "New Computer Modern",
   fecha: datetime.today(), // o datetime(year: .., month: .., day: ..) o "Mes Año"
   ubicacion: none, // p. ej. "Lima" (se imprime junto con la fecha)
-  logo: none, // imagen del logo institucional; si es none se muestra un recuadro de ejemplo
   // --- bloques de contenido del material preliminar (none => sección omitida) ---
   certificate: none,
   agradecimientos: none,
@@ -239,13 +238,7 @@
 
     // --- cabecera institucional (arriba) ---
     #v(0.2cm)
-    #if logo != none {
-      logo
-    } else {
-      rect(width: 3.6cm, height: 1.7cm, stroke: 0.5pt + luma(160), radius: 2pt)[
-        #align(center + horizon)[#text(size: 8pt, fill: luma(130))[Logo]]
-      ]
-    }
+    #image("logo/universidad_nacional_de_ingenieria_logo_vector.png", width: 20%)
     #v(0.2cm)
     #text(size: 13pt, weight: "bold")[Universidad Nacional de Ingeniería]
     #linebreak()

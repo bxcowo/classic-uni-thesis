@@ -1,8 +1,8 @@
 # Compiled output
 *.pdf
 
-# Logos institucionales con derechos (no redistribuir)
-/logo/
+# Vector de imprenta no usado por la plantilla (2 MB)
+*.eps
 
 # Editor / OS cruft
 .DS_Store

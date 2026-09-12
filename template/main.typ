@@ -25,7 +25,6 @@
   asesor: "Dr. Nombre Apellido",
   ubicacion: "Lima",
   fecha: datetime(day: 12, month: 9, year: 2026),
-  // logo: image("figures/logo.png", height: 1.7cm),  // opcional; por defecto se muestra un recuadro
 
   // ---- material preliminar ----
   certificate: [
