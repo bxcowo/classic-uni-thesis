@@ -1,4 +1,4 @@
-#import "../../lib.typ": flex-caption
+#import "@preview/uni-bachelor-thesis:0.1.0": flex-caption
 
 = Resultados
 

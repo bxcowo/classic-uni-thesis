@@ -10,9 +10,7 @@
 //  solo editas contenido aquí (y en los archivos de chapters/).
 // ============================================================================
 
-// #import "@preview/uni-bachelor-thesis:0.1.0": thesis, abbrev-table, flex-caption
-
-#import "../lib.typ": abbrev-table, flex-caption, thesis
+#import "@preview/uni-bachelor-thesis:0.1.0": abbrev-table, flex-caption, thesis
 
 #show: thesis.with(
   // ---- metadatos ----

@@ -45,12 +45,17 @@ typst watch main.typ
 
 ### Desde este repositorio (desarrollo local)
 
-Los archivos de `template/` importan la librería por ruta relativa, así que
-compila indicando la raíz del proyecto:
+Los archivos de `template/` importan la librería como
+`@preview/uni-bachelor-thesis:0.1.0`, así que para probarlos en local enlaza el
+repositorio en tu carpeta de paquetes:
 
 ```sh
-typst compile --root . template/main.typ     # -> template/main.pdf
-typst watch   --root . template/main.typ     # vista previa
+DEST="${XDG_DATA_HOME:-$HOME/.local/share}/typst/packages/preview/uni-bachelor-thesis/0.1.0"
+mkdir -p "$(dirname "$DEST")"
+ln -s "$(pwd)" "$DEST"
+
+typst compile template/main.typ     # -> template/main.pdf
+typst watch   template/main.typ     # vista previa
 ```
 
 ## Estructura del proyecto
@@ -136,7 +141,7 @@ Figuras, dales un `flex-caption`: la forma **larga** va bajo la figura y la
 capítulos son `#include`dos y no heredan los imports de `main.typ`):
 
 ```typ
-#import "../../lib.typ": flex-caption
+#import "@preview/uni-bachelor-thesis:0.1.0": flex-caption
 
 #figure(
   image("../figures/your-figure.png", width: 80%),
@@ -181,23 +186,22 @@ Cita con `@citekey`. Las citas se renderizan en negro, en estilo autor–año.
 
 ## Compilación
 
+Dentro de un proyecto creado con `typst init`:
+
 ```sh
-typst compile --root . template/main.typ     # -> template/main.pdf
-typst watch   --root . template/main.typ     # vista previa mientras editas
+typst compile main.typ     # -> main.pdf
+typst watch   main.typ     # vista previa mientras editas
 ```
 
 ## Desarrollo de la plantilla
 
-Para probar la librería y el ejemplo en local, compila siempre con la raíz del
-repositorio:
+El template usa el import absoluto `@preview/uni-bachelor-thesis:0.1.0`. Para
+trabajar sobre este repositorio, enlázalo como paquete local (ver
+"Inicio rápido") y compila con:
 
 ```sh
-typst compile --root . template/main.typ
+typst compile template/main.typ
 ```
-
-Al publicar en Typst Universe, cambia los imports relativos (`../lib.typ` en
-`main.typ`, `../../lib.typ` en los capítulos) por
-`@preview/uni-bachelor-thesis:0.1.0`.
 
 ## Licencia
 
